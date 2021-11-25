@@ -1,0 +1,50 @@
+.carded{
+    padding: 20px;
+    color: white;
+    margin-top: 15px;
+    background-color: #123942;
+    height: 100%;
+}
+
+.dpHolder{
+    height: 100px;
+    width: 100px;
+    background-color: indianred;
+    background-size:cover;
+    margin: auto;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    border: 4px solid white;
+    background-repeat: no-repeat;
+}
+.contained{
+    border: 1px solid white;
+    border-radius: 50px;
+    width: 70%;
+    align-self: center;
+    box-shadow: none;
+    background-color: rgba(0, 0, 0, 0.1);
+    height: 60px;
+    margin: auto;
+    margin-bottom: 20px;
+}
+.contained p{
+    line-height: 50px;
+    font-family: monospace;
+}
+
+.contained:hover{
+    background-color: white;
+    cursor: pointer;
+    border: 1px solid white;
+    color: #5e6769;
+}
+a{
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    /* color: #123942; */
+    cursor: default;
+}
+
