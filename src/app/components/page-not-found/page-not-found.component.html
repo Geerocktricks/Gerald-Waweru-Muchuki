@@ -1,1 +1,46 @@
-<p>page-not-found works!</p>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <img [src] = 'myImage' alt="my profile" style="height: 35px; width: 35px;">
+      </div>
+      <a class="navbar-brand text-muted" href="#">Gerald Waweru</a>
+      <ul class="navbar-nav humbeger">
+        <span style="font-size:30px;cursor:pointer" click="openNav()">&#9776;</span>
+      </ul>
+    </div>
+  </nav>
+<div class="wrapper">
+    <aside id="mySidenav" class="sidenav">
+        <div class=" text-center sideContainer">
+            <img [src] = 'myImage' alt="my profile pic" style="height: 100px; width: 100px;"><br><br>
+            <h4>Gerald Waweru</h4>
+            <p style="color: rgb(170, 168, 168);">Full Stack Developer</p>
+            <ul id="navLinks">
+                <li><a href="">Gerald</a></li>
+                <li><a href="">About me</a></li>
+                <li><a href="">Resume</a></li>
+                <li><a href="">Portfolio</a></li>
+                <li><a href="">Contact</a></li>
+            </ul>
+         </div>
+         <ul class="socialIcons text-center">
+            <a href=""><li><i class="fa fa-instagram"></i></li></a>
+            <a href=""><li><i class="fa fa-linkedin"></i></li></a>
+            <a href=""><li><i class="fa fa-twitter"></i></li></a>
+            <a href=""><li><i class="fa fa-facebook"></i></li></a>
+            <a href=""><li><i class="fa fa-github"></i></li></a>
+        </ul>
+        <br>
+        <p class="small text-center text-muted">Made with love, Using <span style="font-weight: bold;color: #123942;">Angular.JS</span></p>
+    </aside>
+
+    <div class="bodyArea">
+        <div class="errorMessage">
+            <h2 class="text-center">404</h2>
+            <h3 class="text-center text-muted">Page Not Found</h3>
+            <p class="text-center">We couldn't find that page! Try a different URL.</p>
+        </div>
+    </div>
+
+    
+</div>

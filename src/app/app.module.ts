@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,9 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
       {path: 'home-page', component: HomePageComponent},
       {path: 'about-me', component: AboutMeComponent},
       {path: '', redirectTo: '/home-page', pathMatch: 'full'},
+      {path: '**', component: PageNotFoundComponent},
     ]),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
