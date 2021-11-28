@@ -5,6 +5,9 @@ nav {
     display: none;
     box-shadow: 0px 1px 8px 0px #888888;
 }
+p {
+    color: #666666;
+}
 .humbeger {
     align-items: end;
 }
@@ -13,11 +16,96 @@ nav {
     grid-template-columns: 21% 78%;
     grid-column-gap: 1%;
 }
+.testimonBlogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1em;
+    background-image: linear-gradient(to bottom right, #97c8d3, #123942);
+    color: rgb(255, 255, 255);
+    padding: 2px;
+    /* background-color: rgba(0, 0, 0, .9);
+    justify-content: space-between; */
+}
+.Testimonials, .Blogs {
+    padding: 20px;
+}
+.Blogs p {
+    color: #ffff;
+}
+.card {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-gap: 1em;
+    color: rgb(87, 87, 87);
+    background-color: rgba(233, 233, 233, 0.1);
+    padding: 5px;
+    box-shadow: 0px 1px 8px 0px #2e2e2e;
+    border-radius: 20px;
+}
+.card img {
+    /* border: 5px solid #65848b; */
+}
+.card p {
+    color: #fff;
+}
+.card h5 {
+    color: #123942;
+}
+.upTo {
+    padding: 40px;
+    background-color: #fdfdfd;
+    border-radius: 10px;
+    box-shadow: 0px 1px 8px 0px #888888;
+}
 
 .wrapper > .bodyArea {
     background: rgb(255, 255, 255);
     padding: 1em;
     z-index: 9;
+}
+.aboutHeading {
+    display: grid;
+    grid-template-columns: 1fr;
+    margin-top: 60px;
+    margin-bottom: 50px;
+}
+.aboutHeading span {
+    background-color: #123942;
+    margin: 50px 20px 0px -21px;
+    padding: 10px 20px 10px 30px;
+    font-size: 24px;
+    color: #fff;
+}
+.aboutMe, .testimonBlogs {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 1em;
+}
+.servicesOffered{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-column-gap: 1em;
+}
+.tutor {
+    background-color: white;
+    border: 1px solid #123942;
+    color: #123942;
+}
+.book {
+    margin-bottom: 100px;
+}
+.tutor:hover {
+    background-color: #123942;
+    color: #fff;
+}
+fa-icon {
+    font-size: 70px;
+    margin: auto;
+    color: #123942;
+}
+.quotes {
+    font-size: 8px;
+    color: #123942;
 }
 
 .wrapper > aside {
@@ -211,7 +299,9 @@ nav {
   }
 
   @media screen and (max-width: 575px){
-    .aboutBody {
+    .aboutMe, .servicesOffered, .testimonBlogs {
         grid-template-columns:100%;
+        margin-bottom: 20px;
     }
+
   }

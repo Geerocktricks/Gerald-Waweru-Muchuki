@@ -9,12 +9,15 @@ import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { CarouselModule } from 'ngx-owl-carousel-o';
+
 @NgModule({
   declarations: [
     AppComponent,
     HomePageComponent,
     AboutMeComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent, 
   ],
   imports: [
     BrowserModule,
@@ -26,6 +29,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
       {path: '**', component: PageNotFoundComponent},
     ]),
     FontAwesomeModule,
+    BrowserAnimationsModule,
+    CarouselModule 
   ],
   providers: [],
   bootstrap: [AppComponent]
