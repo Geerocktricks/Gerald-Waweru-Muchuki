@@ -1,0 +1,132 @@
+/* Top nav bar */
+nav {
+    height: 60px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    display: none;
+    box-shadow: 0px 1px 8px 0px #888888;
+}
+.humbeger {
+    align-items: end;
+}
+
+/* Wrapper */
+.wrapper {
+    display: grid;
+    grid-template-columns: 21% 78%;
+    grid-column-gap: 1%;
+    height: 100vh;
+}
+
+.wrapper > aside {
+    background: rgb(255, 255, 255);
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    height: 100vh;
+}
+
+.wrapper > .bodyArea {
+    background: rgb(255, 255, 255);
+    padding: 1em;
+    z-index: 9;
+    height: 100vh;
+    
+}
+
+.sideContainer{
+    padding-top: 30px;
+}
+
+#navLinks li{
+    list-style: none;
+    border-bottom: 1px solid rgb(224, 224, 224);
+    padding: 10px;
+    margin-left: -12%;
+}
+#navLinks a{
+    text-decoration: none;
+    color: rgb(105, 105, 105);
+    font-weight: 100;
+}
+#navLinks li:hover {
+    background-color:#e3e3e3;
+    border-right: 2px solid #123942;
+}
+.socialIcons{
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 1%;
+    margin-top: 50px; 
+    margin-right: 20px;
+}
+.socialIcons a{
+    margin-right: 10px;
+    background-color: #e3e3e3;
+    padding: 5px;
+    color: rgb(92, 92, 92);
+    border-radius: 10px;
+    
+}
+.socialIcons a:hover{
+    background-color: #123942;
+    color: white;
+    }
+.socialIcons li{
+    display: inline;
+}
+
+
+
+
+/* Media Queries */
+
+@media screen and (max-width: 1120px) {
+    .socialIcons a {
+        margin-right: 3px;
+    }
+    
+  }
+
+@media screen and (max-width: 990px) {
+    nav {
+        display: grid;
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        top: 0;
+        z-index: 99;
+        
+    }
+    .bodyArea {
+        display: grid;
+        position: fixed;
+        z-index: 99;
+        min-width: 100%;
+    }
+    aside {
+        display: none;
+        overflow: hidden;
+    }
+    .navbar-header {
+        margin-right: 10px;
+    }
+    .navbar-brand {
+        font-size: 17px;
+    }
+    .humbeger {
+        position: absolute;
+        right: 10px;
+    }
+    .wrapper {
+        grid-column-gap:0px;
+        display: grid;
+        grid-template-columns: 0% 100%;
+        
+    }
+  }
+
+  @media screen and (max-width: 575px){
+    .aboutBody {
+        grid-template-columns:100%;
+    }
+  }
