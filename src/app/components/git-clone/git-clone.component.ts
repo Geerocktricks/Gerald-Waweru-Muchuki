@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-git-clone',
@@ -7,9 +8,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class GitCloneComponent implements OnInit {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit(): void {
+    this.http.get('https://api.github.com/users/geerocktricks')
+    .subscribe(data =>{
+      console.log(data);
+    })
   }
 
 }
