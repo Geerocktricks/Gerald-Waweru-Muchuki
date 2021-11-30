@@ -1,0 +1,17 @@
+
+      <div class="container contact">
+        <div>
+          <h4 class="mb-4">Contact Me</h4>
+          
+        </div>
+        <div class="reachMeFor">
+          <h4 class="mb-4">Need Help? Hire Me.</h4>
+          <div class="containerz mb-4">
+            
+            
+          </div>
+          <div class="learnToCode mt-4">
+            <a href="" class="btn btn-success mt-4" style="margin: auto;">Learn To Code</a>
+          </div>
+        </div>
+      </div>
