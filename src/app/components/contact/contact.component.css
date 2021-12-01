@@ -198,6 +198,13 @@ form input, form textarea {
     .bodyArea .container{
         display: grid;
         grid-template-columns: 1fr;
-        min-height: 100vh;
+        position: relative;
+    }
+    
+    .bodyArea {
+        min-height: 180vh;
+    }
+    .containerz {
+        margin-top: -100px;
     }
   }

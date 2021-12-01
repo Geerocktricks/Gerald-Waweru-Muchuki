@@ -1,9 +1,16 @@
+.wrapper {
+    display: grid;
+    grid-template-columns: 100%;
+    height: 100vh;
+    background-image: linear-gradient(to bottom right, #3f8797, #123942);
+}
+
 .carded{
     padding: 20px;
     color: white;
-    margin-top: 15px;
-    background-color: #123942;
+    /* background-color: #123942; */
     height: 100%;
+    opacity: 1;
 }
 
 .dpHolder{
