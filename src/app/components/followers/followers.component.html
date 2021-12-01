@@ -9,7 +9,7 @@
   <section class="text-center overviewRepos">
     <p class="overview">
         <fa-icon [icon]="faBackspace" style="color: #c3c3c3;margin-right: 5px;"></fa-icon>
-        <a href="">Back to Resume</a>
+        <a href="/github">Back to Github Clone</a>
     </p>
     <p class="repositories">
         <fa-icon [icon]="faFile" style="color: #c3c3c3;"></fa-icon>
@@ -23,15 +23,14 @@
     <aside id="mySidenav" class="sidenav text-center">
         <div class=" text-center sideContainer" style="margin-right: 20px;">
             <img src="{{data.avatar_url}}" alt="My Github profile picture" class="mainAvatar">
-            <h4 class="tetxt-muted text-center mt-4">{{ data.login }}</h4>
+            <h4 class="tetxt-muted text-center mt-4"> {{data.login}} </h4>
             <a href="https://github.com/Geerocktricks" class="visitMyGithub-a">
                 <div class="visitMyGithub mt-4">
                     Visit My Github page
                 </div>
             </a>
             <div class="followersFollowing mt-4">
-                <p class="followers"><b>{{ data.followers }}</b> <a href="/followers">Followers</a></p>
-                <p class="following"><b>{{ data.following }}</b> <a href="/following">Following</a></p>
+                <p class="following"><b>{{data.following}} </b> <a href="/following">Following</a></p>
             </div>
          </div>
          <ul class="socialIcons text-center mt-4">
@@ -46,30 +45,22 @@
 
     <div class="bodyArea">
       <div class="repoHeading">
-        <h4 class="mb-4 someRepoH4">Few Github Repositories</h4>
+        <h4 class="mb-4 someRepoH4">{{data.followers}} Github Followers</h4>
       </div>
       <!-- Repo card -->
       <div class="reposHere container-fluid">
-        <div *ngFor = 'let repo of repos' class="card">
-            <div class="cardHolder">
-                <h4>{{ repo.name }}</h4>
-                <p class="visibility" style="background-color: #123942;color: #fff;">{{ repo.visibility }}</p>
-            </div>
-            <h5 style="border-bottom: 2px solid #123942;width: 100px;">Description</h5>
-            <p *ngIf = 'repo.description; else elseBlock'>{{ repo.description }}</p>
-            <ng-template #elseBlock>
-                <p>Sorry, this repository doesn't have a description.</p>
-            </ng-template>
-    
-            <a href="{{repo.homepage}}" target="_blank" *ngIf = 'repo.homepage; else elseBlocks'><b><fa-icon [icon]="faExternalLinkAlt" style="color: #123942;"></fa-icon> </b> {{ repo.homepage }}</a>
-            <ng-template #elseBlocks>
-                <p style="color: red;">***This repo is not hosted</p>
-            </ng-template>
-            <ul class="languageDate mt-4">
-                <li style="margin-right: 30px;">{{ repo.language }}</li>
-                <li>Updated on {{ repo.updated_at | date }}</li>
-            </ul>
-        </div>
+          <div class="card eachUser" *ngFor= 'let user of users'>
+              <div>
+                <img src="{{user.avatar_url}}" alt="My Github profile picture" class="userAvatar">
+              </div>
+              <div>
+                  <h4>{{ user.login }}</h4>
+              </div>
+              <div>
+                  <a href="{{ user.html_url }}"><button class="btn">Profile</button></a>
+              </div>
+          </div>
+        
       </div>
     </div>
 

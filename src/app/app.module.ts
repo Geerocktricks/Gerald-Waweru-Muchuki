@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { GitHubServiceService } from './git-hub-service.service'
 
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -16,6 +17,8 @@ import { ResumeComponent } from './components/resume/resume.component';
 import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { GitCloneComponent } from './components/git-clone/git-clone.component';
+import { FollowersComponent } from './components/followers/followers.component';
+import { FollowingComponent } from './components/following/following.component';
 
 @NgModule({
   declarations: [
@@ -27,6 +30,8 @@ import { GitCloneComponent } from './components/git-clone/git-clone.component';
     PortfolioComponent,
     ContactComponent,
     GitCloneComponent,
+    FollowersComponent,
+    FollowingComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +43,8 @@ import { GitCloneComponent } from './components/git-clone/git-clone.component';
       {path: 'portfolio', component:PortfolioComponent},
       {path: 'contact', component:ContactComponent},
       {path: 'github', component:GitCloneComponent},
+      {path: 'followers', component:FollowersComponent},
+      {path: 'following', component:FollowingComponent},
       {path: '', redirectTo: '/home-page', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent},
     ]),
@@ -46,7 +53,9 @@ import { GitCloneComponent } from './components/git-clone/git-clone.component';
     CarouselModule,
     HttpClientModule
   ],
-  providers: [],
+  providers: [
+    GitHubServiceService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

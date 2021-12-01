@@ -68,7 +68,7 @@
 }
 .followersFollowing {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 2em;
 }
 .followers, .visibility {
@@ -76,8 +76,8 @@
     align-self: flex-end;
 }
 .following {
-    justify-self: start;
-    align-self: flex-end;
+    justify-self: center;
+    align-self: center;
 }
 aside {
     height: 300px; 
@@ -124,7 +124,7 @@ aside {
 
 .reposHere {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     grid-gap: 1em;
 }
 .reposHere .card {
@@ -156,6 +156,22 @@ aside {
     font-weight: 100;
 }
 
+.eachUser {
+    display: grid;
+    grid-template-columns: 1fr 10fr 1fr;
+    grid-gap: 1em;
+}
+.eachUser button {
+    border: none;
+    background-color: #123942;
+    color: #fff;
+    
+}
+.userAvatar {
+    height: 70px;
+    width: 70px;
+    border-radius: 9rem;
+}
 
 
 /* Media Queries */
@@ -211,5 +227,11 @@ aside {
     .reposHere {
         display: grid;
         grid-template-columns: 1fr;
+    }
+  }
+
+  @media screen and (max-width: 400px) {
+    .eachUser {
+        grid-template-columns: 1fr 10fr;
     }
   }
