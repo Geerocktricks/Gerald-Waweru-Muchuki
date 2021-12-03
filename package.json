@@ -2,14 +2,21 @@
   "name": "gerald-waweru-muchuki",
   "version": "0.0.0",
   "scripts": {
+    "heroku-postbuild": "ng build --prod",
     "ng": "ng",
-    "start": "ng serve",
+    "start": "node server.js",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },
+  "engines": {
+    "node": "14.18.0",
+    "npm": "6.14.15"
+  },
   "private": true,
   "dependencies": {
+    "@angular/cli": "~13.0.3",
+    "@angular/compiler-cli": "~13.0.0",
     "@angular/animations": "~13.0.0",
     "@angular/cdk": "^13.0.3",
     "@angular/common": "~13.0.0",
@@ -32,7 +39,8 @@
     "ngx-owl-carousel-o": "^7.0.0",
     "rxjs": "~7.4.0",
     "tslib": "^2.3.0",
-    "zone.js": "~0.11.4"
+    "zone.js": "~0.11.4",
+    "typescript": "~4.4.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~13.0.3",
