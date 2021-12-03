@@ -11,6 +11,7 @@ export class ContactComponent implements OnInit {
   myImage: string = 'assets/images/me.jpg';
   faEnvelope = faEnvelope;
   faCheckCircle = faCheckCircle;
+  opened = false;
   constructor() { }
 
   ngOnInit(): void {

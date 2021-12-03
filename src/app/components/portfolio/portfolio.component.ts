@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PortfolioComponent implements OnInit {
   myImage: string = 'assets/images/me.jpg';
-
+  opened = false;
   constructor() { }
 
   ngOnInit(): void {

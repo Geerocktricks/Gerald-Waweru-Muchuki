@@ -5,12 +5,13 @@
       </div>
       <a class="navbar-brand text-muted" href="#">Gerald Waweru</a>
       <ul class="navbar-nav humbeger">
-        <span style="font-size:30px;cursor:pointer" (click)="openNav()">&#9776;</span>
+        <span style="font-size:30px;cursor:pointer" (click)="opened = !opened">&#9776;</span>
       </ul>
     </div>
   </nav>
+
 <div class="wrapper">
-    <aside id="mySidenav" class="sidenav">
+    <aside id="mySidenav" class="sidenav position-sticky">
         <div class=" text-center sideContainer">
             <img [src] = 'myImage' alt="my profile pic" style="height: 100px; width: 100px;"><br><br>
             <h4>Gerald Waweru</h4>
@@ -34,6 +35,34 @@
         <p class="small text-center text-muted">Made with love, Using <span style="font-weight: bold;color: #123942;">Angular.JS</span></p>
     </aside>
 
+    <mat-sidenav-container>
+        <mat-sidenav [(opened)]= 'opened'>
+            <aside id="mySidenav" class="sidenav">
+            <div class=" text-center sideContainer">
+                <img [src] = 'myImage' alt="my profile pic" style="height: 100px; width: 100px;"><br><br>
+                <h4>Gerald Waweru</h4>
+                <p style="color: rgb(170, 168, 168);">Full Stack Developer</p>
+                <ul id="navLinks">
+                    <li><a href="landingpage.html">Gerald</a></li>
+                    <li><a href="/about-me">About me</a></li>
+                    <li><a href="/resume">Resume</a></li>
+                    <li><a href="/portfolio">Portfolio</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+             </div>
+             <ul class="socialIcons text-center">
+                <a href=""><li><i class="fa fa-instagram"></i></li></a>
+                <a href=""><li><i class="fa fa-linkedin"></i></li></a>
+                <a href=""><li><i class="fa fa-twitter"></i></li></a>
+                <a href=""><li><i class="fa fa-facebook"></i></li></a>
+                <a href=""><li><i class="fa fa-github"></i></li></a>
+            </ul>
+            <br>
+            <p class="small text-center text-muted">Made with love, Using <span style="font-weight: bold;color: #123942;">Angular.JS</span></p>
+        </aside>
+        </mat-sidenav>
+        <mat-sidenav-content>
+
     <div class="bodyArea">
         <div class="aboutHeading">
             <h3 class="small text-muted"><span>About Me</span>Versatile-Coder</h3>
@@ -51,6 +80,7 @@
                 </div>
                 <div class="ticTacToe text-center">
                     <h4>Play Tic Tac Toe</h4>
+                    <mat-slider min="1" max="100" step="1" value="50"></mat-slider>
                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur perspiciatis voluptatibus debitis omnis soluta cum eveniet ducimus cumque, eius explicabo earum, odit possimus magnam sint aperiam dolorum a. In, beatae!</p>
                     <div class="restrt text-center">
                         <br><br>
@@ -159,4 +189,6 @@
     
 
     
+</mat-sidenav-content>
+</mat-sidenav-container>
 </div>

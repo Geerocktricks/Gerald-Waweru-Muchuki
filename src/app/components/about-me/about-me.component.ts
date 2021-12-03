@@ -22,41 +22,12 @@ export class AboutMeComponent implements OnInit {
   faChalkboardTeacher = faChalkboardTeacher;
   faQuoteLeft = faQuoteLeft;
   faQuoteRight = faQuoteRight;
+  opened = false;
   btn = document.querySelector('.restartButton');
   constructor() { }
 
 
-  customOptions: OwlOptions = {
-    loop: true,
-    mouseDrag: true,
-    touchDrag: true,
-    pullDrag: true,
-    dots: true,
-    navSpeed: 600,
-    navText: ['&#8249', '&#8250;'],
-    responsive: {
-      0: {
-        items: 1 
-      },
-      400: {
-        items: 2
-      },
-      760: {
-        items: 3
-      },
-      1000: {
-        items: 1
-      }
-    },
-    nav: true
-  }
-
-
   ngOnInit(): void {
-  }
-
-  openNav() {
-    document.getElementById("mySidenav").style.width = "100%";
   }
   
 

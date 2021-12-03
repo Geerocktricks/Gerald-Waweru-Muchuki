@@ -1,7 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
-import { GitHubServiceService } from './git-hub-service.service'
+import { GitHubServiceService } from './git-hub-service.service';
+import { FormsModule } from '@angular/forms';
 
 import { RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
@@ -10,6 +11,10 @@ import { HomePageComponent } from './components/home-page/home-page.component';
 import { AboutMeComponent } from './components/about-me/about-me.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+
+import { MatSliderModule } from '@angular/material/slider';
+import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTabsModule} from '@angular/material/tabs';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
@@ -51,7 +56,11 @@ import { FollowingComponent } from './components/following/following.component';
     FontAwesomeModule,
     BrowserAnimationsModule,
     CarouselModule,
-    HttpClientModule
+    HttpClientModule,
+    MatSliderModule,
+    MatSidenavModule,
+    FormsModule,
+    MatTabsModule
   ],
   providers: [
     GitHubServiceService

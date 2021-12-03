@@ -5,10 +5,37 @@
       </div>
       <a class="navbar-brand text-muted" href="#">Gerald Waweru</a>
       <ul class="navbar-nav humbeger">
-        <span style="font-size:30px;cursor:pointer" click="openNav()">&#9776;</span>
+        <span style="font-size:30px;cursor:pointer" (click)="opened = !opened">&#9776;</span>
       </ul>
     </div>
   </nav>
+  <mat-sidenav-container>
+    <mat-sidenav [(opened)] = 'opened'>
+      <div id="mySidenav" class="sidenav">
+        <div class=" text-center sideContainer">
+            <img [src] = 'myImage' alt="my profile pic" style="height: 100px; width: 100px;"><br><br>
+            <h4>Gerald Waweru</h4>
+            <p style="color: rgb(170, 168, 168);">Full Stack Developer</p>
+            <ul id="navLinks">
+                <li><a href="landingpage.html">Gerald</a></li>
+                <li><a href="/about-me">About me</a></li>
+                <li><a href="/resume">Resume</a></li>
+                <li><a href="/portfolio">Portfolio</a></li>
+                <li><a href="/contact">Contact</a></li>
+            </ul>
+         </div>
+         <ul class="socialIcons text-center">
+            <a href=""><li><i class="fa fa-instagram"></i></li></a>
+            <a href=""><li><i class="fa fa-linkedin"></i></li></a>
+            <a href=""><li><i class="fa fa-twitter"></i></li></a>
+            <a href=""><li><i class="fa fa-facebook"></i></li></a>
+            <a href=""><li><i class="fa fa-github"></i></li></a>
+        </ul>
+        <br>
+        <p class="small text-center text-muted">Made with love, Using <span style="font-weight: bold;color: #123942;">Angular.JS</span></p>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
 <div class="wrapper">
     <aside id="mySidenav" class="sidenav">
         <div class=" text-center sideContainer">
@@ -36,9 +63,32 @@
 
     <div class="bodyArea">
       <div class="aboutHeading">
-        <h3 class="small text-muted"><span>Portfolio</span>My best works</h3>
+        <h3 class="small text-muted"><span>Portfolio</span>Best works stacks</h3>
+      </div>
+      <div class="wrapperContainer">
+        <mat-tab-group mat-align-tabs="start">
+          <div class="container">
+            <mat-tab label="MEAN Stack">
+              <div class="container">
+                Coming Soon
+              </div>
+            </mat-tab>
+            <mat-tab label="MERN Stack">
+              <div class="container">
+                Coming Soon
+              </div>
+            </mat-tab>
+            <mat-tab label="Flask/Django">
+              <div class="container">
+                Coming Soon
+              </div>
+            </mat-tab>
+          </div>
+        </mat-tab-group>
       </div>
     </div>
 
     
 </div>
+</mat-sidenav-content>
+  </mat-sidenav-container>

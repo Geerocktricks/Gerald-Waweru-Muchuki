@@ -116,7 +116,7 @@ nav {
 }
 form input, form textarea {
     border: none;
-    box-shadow: 3px 3px 10px 1px #cecece;
+    border-bottom: 2px solid #123942;
 }
 
 
@@ -168,6 +168,13 @@ form input, form textarea {
         display: grid;
         grid-template-columns: 0% 100%;
         
+    }
+    mat-sidenav {
+        width: 70%;
+        padding: 5px;
+        max-height: 100vh;
+        position: fixed;
+        z-index: 999;
     }
   }
 

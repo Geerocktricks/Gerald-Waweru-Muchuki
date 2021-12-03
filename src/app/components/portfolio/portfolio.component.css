@@ -75,7 +75,22 @@ nav {
 .socialIcons li{
     display: inline;
 }
-
+.wrapperContainer > ul {
+    display: grid;
+    grid-template-columns: repeat(4, 2fr);
+    grid-gap: 1em;
+    list-style: none;
+    box-shadow: 0px 10px 10px 4px rgba(0, 0, 0, .3);
+    min-height: 50px;
+}
+.wrapperContainer > ul > li {
+    cursor: pointer;
+    align-self: center;
+    color: #e3e3e3;
+}
+.wrapperContainer > ul >li:hover {
+    color: #123942;
+}
 
 
 
@@ -123,6 +138,18 @@ nav {
         grid-template-columns: 0% 100%;
         
     }
+    mat-sidenav {
+        width: 70%;
+        padding: 5px;
+        max-height: 100vh;
+        position: fixed;
+        z-index: 999;
+    }
+    .wrapperContainer {
+        position: absolute;
+        top: 120px;
+        right: 50px;
+    }
   }
 
   /* About heading */
@@ -130,7 +157,7 @@ nav {
     display: grid;
     grid-template-columns: 1fr;
     margin-top: 60px;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 .aboutHeading span {
     background-color: #123942;
@@ -145,5 +172,10 @@ nav {
   @media screen and (max-width: 575px){
     .aboutBody {
         grid-template-columns:100%;
+    }
+    .wrapperContainer {
+        position: absolute;
+        top: 120px;
+        right: 0;
     }
   }

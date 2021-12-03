@@ -11,3 +11,5 @@ p {
 h3, h4, h5 {
     font-family: 'Times New Roman', Times, serif;
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

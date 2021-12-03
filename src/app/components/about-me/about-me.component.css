@@ -156,7 +156,9 @@ fa-icon {
 .socialIcons li{
     display: inline;
 }
-
+mat-sidenav-content {
+    background-color: #fff;
+}
 
 /* Tic Tac Toe */
 /* :root {
@@ -275,7 +277,7 @@ fa-icon {
     nav {
         display: grid;
         position: -webkit-sticky; /* Safari */
-        position: sticky;
+        position: sticky !important;
         top: 0;
         z-index: 99;
         
@@ -295,6 +297,12 @@ fa-icon {
         display: grid;
         grid-template-columns: 0% 100%;
         
+    }
+    mat-sidenav {
+        width: 70%;
+        padding: 5px;
+        max-height: 100vh;
+        position: fixed;
     }
   }
 
