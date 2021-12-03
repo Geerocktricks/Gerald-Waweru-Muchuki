@@ -24,6 +24,7 @@ import { ContactComponent } from './components/contact/contact.component';
 import { GitCloneComponent } from './components/git-clone/git-clone.component';
 import { FollowersComponent } from './components/followers/followers.component';
 import { FollowingComponent } from './components/following/following.component';
+import { BlogComponent } from './components/blog/blog.component';
 
 @NgModule({
   declarations: [
@@ -37,6 +38,7 @@ import { FollowingComponent } from './components/following/following.component';
     GitCloneComponent,
     FollowersComponent,
     FollowingComponent,
+    BlogComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +52,7 @@ import { FollowingComponent } from './components/following/following.component';
       {path: 'github', component:GitCloneComponent},
       {path: 'followers', component:FollowersComponent},
       {path: 'following', component:FollowingComponent},
+      {path: 'blog', component:BlogComponent},
       {path: '', redirectTo: '/home-page', pathMatch: 'full'},
       {path: '**', component: PageNotFoundComponent},
     ]),
